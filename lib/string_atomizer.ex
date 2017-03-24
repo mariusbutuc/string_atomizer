@@ -24,6 +24,9 @@ defmodule StringAtomizer do
       iex> StringAtomizer.from_camel_case("123FourFive6")
       :"123_four_five6"
 
+      iex> StringAtomizer.from_camel_case("ACME")
+      :acme
+
   Regular expression lifted from http://stackoverflow.com/questions/1175208/elegant-python-function-to-convert-camelcase-to-snake-case
   """
   @spec from_camel_case(String.t) :: atom
